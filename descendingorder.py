@@ -7,8 +7,10 @@
 # Input: 21445 Output: 54421
 # Input: 145263 Output: 654321
 # Input: 1254859723 Output: 9875543221
+
+
 def Descending_Order(num):
-    return int(''.join(sorted(str(num),reverse=True)))
+    return int(''.join(sorted(str(num), reverse=True)))
 
 
 print(Descending_Order(1254859723))
