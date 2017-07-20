@@ -25,7 +25,19 @@ def done_or_not(board): #board[i][j]
     for row in board:
         if does_list_have_dups(row):
             finished = False
-    # TODO: check columns and region
+    # TODO: check region
+    j = 0
+    while j < len(board[0]):
+        tmp = []
+        i = 0
+        while i < len(board):
+            tmp.append(board[i][j])
+            i += 1
+        j += 1
+        print(tmp)
+        if does_list_have_dups(tmp):
+            finished = False
+
     
     if finished:
         return 'Finished'
