@@ -15,16 +15,12 @@
 
 
 def comp(array1, array2):
-    if (array1 is None) or (array2 is None) or (not array1) or (not array2):
-        return False
+    return None not in (array1, array2) and [i*i for i in sorted(array1)] == sorted(array2)
 
-    result = True
-    for x in array1:
-        if x ** 2 not in array2:
-            result = False
-            break
-    return result
 
 a = [121, 144, 19, 161, 19, 144, 19, 11]
 b = [121, 14641, 20736, 361, 25921, 361, 20736, 361]
 print(comp(a, b))
+a = [121, 144, 19, 161, 19, 144, 19, 11]
+b = [121, 14641, 20736, 361, 25921, 361, 20736, 361]
+print(comp(a,b,))
